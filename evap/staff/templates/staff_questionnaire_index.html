@@ -88,20 +88,16 @@
             <div class="card-body tab-content">
                 <div class="tab-pane show active" id="top" role="tabpanel">
                     <div class="row align-items-center mb-3">
-                        <!-- {% translate 'Top general questionnaires' as headline %} -->
                         {% include 'staff_questionnaire_index_list.html' with questionnaires=general_questionnaires_top headline=headline extra_classes='mb-3' type='top' %}
                     </div>
                 </div>
                 <div class="tab-pane" id="contributor" role="tabpanel">
-                    <!-- {% translate 'Contributor questionnaires' as headline %} -->
                     {% include 'staff_questionnaire_index_list.html' with questionnaires=contributor_questionnaires headline=headline extra_classes='mb-3' type='contributor' %}
                 </div>
                 <div class="tab-pane" id="bottom" role="tabpanel">
-                    <!-- {% translate 'Bottom general questionnaires' as headline %} -->
                     {% include 'staff_questionnaire_index_list.html' with questionnaires=general_questionnaires_bottom headline=headline extra_classes='mb-3' type='bottom' %}
                 </div>
                 <div class="tab-pane" id="dropout" role="tabpanel">
-                    <!-- {% translate 'Dropout questionnaires' as headline %} -->
                     {% include 'staff_questionnaire_index_list.html' with questionnaires=dropout_questionnaires headline=headline extra_classes='' type='dropout' %}
                 </div>
             </div>
@@ -181,6 +177,7 @@
             console.log("change tab to", tab)
             localStorage['selected_q_tab'] = tab;
         }
+
         document.getElementById("topTab").addEventListener("click", () => saveSelectedTab("topTab"));
         document.getElementById("contributorTab").addEventListener("click", () => saveSelectedTab("contributorTab"));
         document.getElementById("bottomTab").addEventListener("click", () => saveSelectedTab("bottomTab"));
