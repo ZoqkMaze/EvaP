@@ -166,10 +166,10 @@
     </script>
 
     <script type="module">
-        var tabName = localStorage['selected_q_tab'];
+        let tabName = localStorage['selected_q_tab'];
         if (["topTab", "contributorTab", "bottomTab", "dropoutTab"].includes(tabName)) {
-            var tab = document.getElementById(tabName);
-            var tabTrigger = new bootstrap.Tab(tab);
+            let tab = document.getElementById(tabName);
+            let tabTrigger = new bootstrap.Tab(tab);
             tabTrigger.show();
         }
 
